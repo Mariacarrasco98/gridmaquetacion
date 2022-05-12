@@ -1,0 +1,110 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	min-height: 100%; 
+	font-size: 20px;
+	 
+}
+
+.contenedor_grid{
+	display: grid;
+	gap: 3px;
+	grid-template: 
+	"header" 100px
+	"beneficios" auto
+	"form" 200px
+	"footer" 40px;
+}
+
+.header{
+	grid-area: header;
+	background-color: #FFFB00;
+}
+
+
+.beneficios{
+	grid-area: beneficios;
+	background-color: #358C0F;
+}
+
+.form{
+	grid-area: form;
+	background-color: #FF0000;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #4E4E4E;
+}
+
+
+/* Small */
+
+@media (min-width: 767px max-width: 990px) {
+	.contenedor_grid{
+		grid-template: 
+		"header" 	100px 
+		"beneficios" auto
+		"form" 	    auto
+		"footer" 	100px /
+		 200px;
+ 	}
+
+}
+
+
+/* Medium */
+
+@media (min-width: 991px) {
+	.contenedor_grid{
+		grid-template: 
+		"header 	header" 	100px 
+		"beneficios beneficios" auto
+		"form 	    form"   	auto
+		"footer 	footer" 	100px /
+		 auto		auto;
+ 	}
+
+}
+
+
+/*large*/
+
+@media (min-width: 1199px) {
+	.contenedor_grid{
+		grid-template: 
+		"header 	header 	header" 	100px 
+		"beneficios form	form"   	auto
+		"footer 	footer 	footer" 	100px /
+		 400px 		auto 	200px;
+	}
+}
+
+
+/* X large*/
+
+@media (min-width: 1600px) {
+	.contenedor_grid{
+		grid-template: 
+		"header 	header 	header" 	100px 
+		"beneficios form    form" 	    auto
+		"footer 	footer 	footer" 	100px /
+		 400px 		auto 	200px;
+	}
+}
+
+
+ 
+
+
+
+
+
